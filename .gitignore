@@ -19,3 +19,10 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore project config
+.idea/
+quizzer.iml
+
+# Ignore code coverage reports
+/coverage

@@ -1,0 +1,21 @@
+Rails:
+  Enabled: true
+
+AllCops:
+  TargetRubyVersion: 2.3
+  Include:
+    - 'config.ru'
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'test/**/*'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Documentation:
+  Enabled: false
