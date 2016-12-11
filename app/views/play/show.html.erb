@@ -1,0 +1,14 @@
+<div ng-controller="PlayCtrl">
+  {{ test }}
+
+  <h1>{{ quiz.title }}</h1>
+
+  <ul>
+    <li ng-repeat="question in quiz.questions"
+        ng-show="quiz.questions.indexOf(question) == currentQuestion">
+      {{ question.text }}
+    </li>
+  </ul>
+
+  <a href="javascript:void(0)" ng-click="nextQuestion()">next</a>
+</div>

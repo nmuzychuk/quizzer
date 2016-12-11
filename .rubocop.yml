@@ -19,3 +19,12 @@ Style/FrozenStringLiteralComment:
 
 Documentation:
   Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space

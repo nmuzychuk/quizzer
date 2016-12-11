@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-lg-3">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h2>Dashboard</h2>
+      </div>
+
+      <div class="panel-body">
+        <div class="media">
+          <div class="media-left">
+            <%= link_to dashboard_path do %>
+                <!--<img class="media-object" src="..." alt="...">-->
+                <div class="jumbotron">
+                  <h3>avatar</h3>
+                </div>
+            <% end %>
+          </div>
+        </div>
+
+        <h4><%= current_user.email %></h4>
+        <hr>
+        <h6>Joined on <%= current_user.created_at %></h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-9">
+
+    <% if true %>
+        <div class="alert alert-info" role="alert">
+          <strong>Notice!</strong> You have unpublished quizzes. They will not be available for other users.
+        </div>
+    <% end %>
+
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-lg-6">
+          <h3><%= link_to 'Quizzes', quizzes_path %></h3>
+        </div>
+
+        <div class="col-lg-6">
+          <h3>Unpublished</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

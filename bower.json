@@ -1,0 +1,7 @@
+{
+  "name": "quizzer",
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6",
+    "angular": "~1.6.1"
+  }
+}
