@@ -28,3 +28,9 @@ Metrics/LineLength:
 
 Style/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/AbcSize:
+  Max: 20
