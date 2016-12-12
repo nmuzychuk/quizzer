@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe AdminController, type: :controller do
-  context 'with logged in user' do
-    let(:user) { create(:user) }
+  context 'with logged in admin' do
+    let(:user) { create(:admin) }
 
     before(:each) do
       sign_in user
@@ -19,18 +19,32 @@ RSpec.describe AdminController, type: :controller do
     end
   end
 
+  context 'with logged in user' do
+    let(:user) { create(:user) }
+
+    before(:each) do
+      sign_in user
+    end
+
+    describe 'GET #index' do
+      before(:each) do
+        get :index
+      end
+
+      it 'redirects to root url' do
+        expect(response).to redirect_to(root_url)
+      end
+    end
+  end
+
   context 'with logged out user' do
     describe 'GET #index' do
       before(:each) do
         get :index
       end
 
-      it 'has http status :found' do
-        expect(response).to have_http_status(:found)
-      end
-
-      it 'redirects to log in url' do
-        expect(response).to redirect_to(new_user_session_url)
+      it 'redirects to root url' do
+        expect(response).to redirect_to(root_url)
       end
     end
   end

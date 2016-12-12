@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   end
 
   get '/admin', to: 'admin#index'
+  scope :admin do
+    resources :categories
+  end
 
   resources :play, only: :show
 end
