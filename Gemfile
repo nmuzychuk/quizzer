@@ -41,6 +41,7 @@ group :development, :test do
 
   gem 'simplecov'
   gem 'simplecov-rcov'
+  gem 'coveralls', require: false
 end
 
 group :development do

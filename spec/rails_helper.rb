@@ -1,6 +1,10 @@
 require 'simplecov'
 require 'simplecov-rcov'
-SimpleCov.formatters = [SimpleCov::Formatter::HTMLFormatter, SimpleCov::Formatter::RcovFormatter]
+require 'coveralls'
+
+SimpleCov.formatters = [SimpleCov::Formatter::HTMLFormatter,
+                        SimpleCov::Formatter::RcovFormatter,
+                        Coveralls::SimpleCov::Formatter]
 SimpleCov.start 'rails'
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
