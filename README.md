@@ -1,5 +1,6 @@
 # Quizzer
 [![Build Status](https://travis-ci.org/nmuzychuk/quizzer.svg?branch=master)](https://travis-ci.org/nmuzychuk/quizzer)
+[![Coverage Status](https://coveralls.io/repos/github/nmuzychuk/quizzer/badge.svg?branch=master)](https://coveralls.io/github/nmuzychuk/quizzer?branch=master)
 [![Code Climate](https://codeclimate.com/github/nmuzychuk/quizzer/badges/gpa.svg)](https://codeclimate.com/github/nmuzychuk/quizzer)
 
 Quizzer is a rails app.
