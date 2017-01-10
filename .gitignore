@@ -29,3 +29,7 @@ quizzer.iml
 
 # Ignore assets
 vendor/assets/bower_components/
+
+# Ignore Vagrant artifacts
+.vagrant/
+ubuntu-xenial-16.04-cloudimg-console.log
