@@ -5,7 +5,7 @@ json.category quiz.category, :name
 json.questions quiz.questions do |question|
   json.extract! question, :text
 
-  json.answers question.answers do |answer|
+  json.answers question.answers.order('random()') do |answer|
     json.extract! answer, :text, :correct
   end
 end
