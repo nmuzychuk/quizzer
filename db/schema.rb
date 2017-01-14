@@ -12,13 +12,16 @@
 
 ActiveRecord::Schema.define(version: 20161212180854) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "answers", force: :cascade do |t|
     t.string   "text"
     t.boolean  "correct"
     t.integer  "question_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["question_id"], name: "index_answers_on_question_id"
+    t.index ["question_id"], name: "index_answers_on_question_id", using: :btree
   end
 
   create_table "categories", force: :cascade do |t|
@@ -32,7 +35,7 @@ ActiveRecord::Schema.define(version: 20161212180854) do
     t.integer  "quiz_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["quiz_id"], name: "index_questions_on_quiz_id"
+    t.index ["quiz_id"], name: "index_questions_on_quiz_id", using: :btree
   end
 
   create_table "quizzes", force: :cascade do |t|
@@ -43,8 +46,8 @@ ActiveRecord::Schema.define(version: 20161212180854) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
-    t.index ["category_id"], name: "index_quizzes_on_category_id"
-    t.index ["user_id"], name: "index_quizzes_on_user_id"
+    t.index ["category_id"], name: "index_quizzes_on_category_id", using: :btree
+    t.index ["user_id"], name: "index_quizzes_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -61,8 +64,12 @@ ActiveRecord::Schema.define(version: 20161212180854) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.boolean  "admin"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "questions", "quizzes"
+  add_foreign_key "quizzes", "categories"
+  add_foreign_key "quizzes", "users"
 end
