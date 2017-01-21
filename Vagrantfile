@@ -70,16 +70,19 @@ Vagrant.configure(2) do |config|
     rvm install 2.3.0
     rvm --default use 2.3.0
 
+    sudo apt-get update -q
+    sudo apt-get install -y postgresql libpq-dev npm nodejs-legacy
+
+    sudo -u postgres createuser -s $(whoami)
+
     gem install bundler
     (cd /vagrant && bundle install)
-
-    sudo apt-get update -q
-    sudo apt-get install -y npm nodejs-legacy
 
     sudo npm install -g bower
     (cd /vagrant && bower install)
 
     (cd /vagrant && bundle exec rake db:create)
     (cd /vagrant && bundle exec rake db:migrate)
+    (cd /vagrant && bundle exec rake db:seed)
   SHELL
 end
