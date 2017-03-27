@@ -39,6 +39,9 @@ group :development, :test do
   gem 'faker'
   gem 'rubocop', '~> 0.45.0'
 
+  gem 'capybara'
+  gem 'poltergeist'
+
   gem 'simplecov'
   gem 'simplecov-rcov'
   gem 'coveralls', require: false

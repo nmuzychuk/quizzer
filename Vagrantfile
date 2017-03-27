@@ -71,8 +71,12 @@ Vagrant.configure(2) do |config|
     rvm --default use 2.3.0
 
     sudo apt-get update -q
-    sudo apt-get install -y postgresql libpq-dev npm nodejs-legacy
+    sudo apt-get install -y nodejs-legacy npm
 
+    sudo apt-get install -y libfontconfig
+    sudo npm install -g phantomjs-prebuilt
+
+    sudo apt-get install -y postgresql libpq-dev
     sudo -u postgres createuser -s $(whoami)
 
     gem install bundler
