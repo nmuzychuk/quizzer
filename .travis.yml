@@ -4,6 +4,8 @@ rvm:
 env:
   - RAILS_ENV=test
 before_script:
+  - npm install -g bower
+  - bower install
   - bundle exec rake db:create
   - bundle exec rake db:migrate
 script:
