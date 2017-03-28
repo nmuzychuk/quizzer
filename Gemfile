@@ -42,6 +42,8 @@ group :development, :test do
   gem 'capybara'
   gem 'poltergeist'
 
+  gem 'database_cleaner'
+
   gem 'simplecov'
   gem 'simplecov-rcov'
   gem 'coveralls', require: false
