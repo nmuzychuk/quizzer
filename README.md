@@ -4,11 +4,13 @@
 [![Code Climate](https://codeclimate.com/github/nmuzychuk/quizzer/badges/gpa.svg)](https://codeclimate.com/github/nmuzychuk/quizzer)
 
 ## Overview
-Quizzer is a way to play and create simple text quizzes. App stack
+Quizzer is a way to play and create simple text quizzes.
+
+App stack
 - Rails
 - PostgreSQL
 - AngularJS, Bootstrap
-- RSpec
+- RSpec, Capybara
 
 ## Getting started
 
