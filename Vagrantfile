@@ -70,7 +70,7 @@ Vagrant.configure(2) do |config|
     rvm install 2.3.0
     rvm --default use 2.3.0
 
-    sudo apt-get update -q
+    sudo apt-get update -qq
     sudo apt-get install -y nodejs-legacy npm
 
     sudo apt-get install -y libfontconfig
