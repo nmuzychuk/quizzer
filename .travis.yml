@@ -2,11 +2,16 @@ language: ruby
 rvm:
 - 2.3.0
 env:
-  - RAILS_ENV=test
+- RAILS_ENV=test
 before_script:
-  - npm install -g bower
-  - bower install
-  - bundle exec rake db:create
-  - bundle exec rake db:migrate
+- npm install -g bower
+- bower install
+- bundle exec rake db:create
+- bundle exec rake db:migrate
 script:
-  - bundle exec rake
+- bundle exec rake
+deploy:
+  provider: heroku
+  api_key:
+    secure: dfawduJommezzb+/6fG9cO5Js/x4mBTQjmcv44vdLnuQBg0I8aIqK5W7zs2D6C4bs2E/TM3sX1zYjstI1SF9pf263M4eFMV0842UpbeHowY619RKcj9helr7xnQ7sKzx2l26E68KVx0O16oZRUbk3FZ7qelRQ1BhUX7jmrzbBYr2ldbihKWPyJ9j4F430JCqlMoe7Jtp/T6ba628WV1xMKOFg5q9kn5XqrjH+ykwz5Q77E1lRjrHXVI7vjOUKWJFaEWOhS8vyH9qIf5TAVUcstfJ605SkgnEHUaUu0tubR3nNhHsSNxHDHWcAF+5z/anJ7TvKzvIKnhrgsRHTj4lSnfkOWfa+EZR6cH/QQrCLqbse5bllf7IvMpu7vu3DnFhZ+wCd7CIznyPzdDqZoIKy78gCA/C491Eh6KLbw+CgqmcEeh3HFricZ7umfRIJXspThY2RXdDVeYb5Aotoiag9cDB7qFWgK3dJFSRFhewi9PrvE8oBoR4xdW9jDsq2dgjUczMW41m/xycDTUs0RDynZraRImAeMsBwmRBehMOHycBSSYwBm3LGebJp5pPkeuIumgxd0lneFwLFzdvptzBN/xZ1RM9/7WQ0eOiiQQyKE6njkcBwnMpVgZpGTtlN8gPXIaqovd4Pk5QjDw+UCTMzPiVuT8k7DEyOtd+eEJW3ZQ=
+  app: intense-coast-37785
