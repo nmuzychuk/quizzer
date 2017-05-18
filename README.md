@@ -15,7 +15,7 @@ App stack
 ## Getting started
 
 ### Heroku
-Heroku deployment is available. It uses a free dyno with all the [implied consequences](https://devcenter.heroku.com/articles/free-dyno-hour-faq).
+Heroku deployment is available
 
 https://intense-coast-37785.herokuapp.com/
 
@@ -36,6 +36,27 @@ cd /vagrant
 Run the web server
 ```console
 bundle exec rails s -p 4000 -b 0.0.0.0
+```
+
+### Docker
+Update database connection
+```console
+sed -i "/timeout/a \\  username: postgres\n  password:\n  host: postgres" config/database.yml
+```
+
+Start containers
+```console
+docker-compose up
+```
+
+Setup database
+```console
+docker-compose run web bundle exec rake db:setup
+```
+
+Install required web components
+```console
+docker-compose run web bower install --allow-root
 ```
 
 ### Test
