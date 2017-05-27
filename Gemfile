@@ -46,7 +46,7 @@ group :development, :test do
 
   gem 'simplecov'
   gem 'simplecov-rcov'
-  gem 'coveralls', require: false
+  gem 'codacy-coverage', :require => false
 end
 
 group :development do
