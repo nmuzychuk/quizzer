@@ -1,7 +1,7 @@
 # Quizzer
 [![Build Status](https://travis-ci.org/nmuzychuk/quizzer.svg?branch=master)](https://travis-ci.org/nmuzychuk/quizzer)
-[![Coverage Status](https://coveralls.io/repos/github/nmuzychuk/quizzer/badge.svg?branch=master)](https://coveralls.io/github/nmuzychuk/quizzer?branch=master)
-[![Code Climate](https://codeclimate.com/github/nmuzychuk/quizzer/badges/gpa.svg)](https://codeclimate.com/github/nmuzychuk/quizzer)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5c39734cbc9d468e90f7fbdbce62218b)](https://www.codacy.com/app/nmuzychuk/quizzer)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/5c39734cbc9d468e90f7fbdbce62218b)](https://www.codacy.com/app/nmuzychuk/quizzer)
 
 ## Overview
 Quizzer is a way to play and create simple text quizzes.
