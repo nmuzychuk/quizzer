@@ -12,14 +12,12 @@ App stack
 - AngularJS, Bootstrap
 - RSpec, Capybara
 
-## Getting started
+## Heroku
+Heroku app
 
-### Heroku
-Heroku deployment is available
+http://online-quizzes.herokuapp.com/
 
-https://intense-coast-37785.herokuapp.com/
-
-### Vagrant
+## Vagrant
 Bring up a Vagrant VM
 ```
 vagrant up
@@ -38,7 +36,7 @@ Run the web server
 bundle exec rails s -p 4000 -b 0.0.0.0
 ```
 
-### Docker
+## Docker
 Update database connection
 ```
 sed -i "/timeout/a \\  username: postgres\n  password:\n  host: postgres" config/database.yml
