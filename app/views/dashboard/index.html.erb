@@ -1,19 +1,16 @@
+<div class="col-lg-12">
+  <div class="alert alert-warning" role="alert">
+    <strong>Notice!</strong> Heroku quizzes are reset regularly.
+  </div>
+</div>
+
 <div class="col-lg-3">
   <div class="panel panel-info">
-    <div class="panel-heading">
-      <h2>Dashboard</h2>
-    </div>
-
     <div class="panel-body">
-      <div class="media">
-        <div class="media-left">
-          <%= link_to dashboard_path do %>
-              <!--<img class="media-object" src="..." alt="...">-->
-              <div class="jumbotron">
-                <h3>avatar</h3>
-              </div>
-          <% end %>
-        </div>
+      <div class="well">
+        <span style="font-size: 1000%; display:block"
+              class="glyphicon glyphicon-user text-center text-muted">
+        </span>
       </div>
 
       <h4><%= current_user.email %></h4>
@@ -24,15 +21,39 @@
 </div>
 
 <div class="col-lg-9">
+  <% if current_user.quizzes.present? %>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h2>My quizzes</h2>
+        </div>
 
-  <% if true %>
-      <div class="alert alert-info" role="alert">
-        <strong>Notice!</strong> You have unpublished quizzes. They will not be available for other users.
+        <div class="panel-body">
+
+          <table class="table">
+            <tr>
+              <th>Quiz</th>
+              <th>Question count</th>
+              <th>Created</th>
+              <th>Action</th>
+            </tr>
+
+            <% current_user.quizzes.each do |quiz| %>
+                <tr>
+                  <td><%= quiz.title %></td>
+                  <td><%= quiz.questions.count %></td>
+                  <td><%= quiz.created_at %></td>
+                  <td><%= link_to 'View', quiz, class: 'btn btn-info' %></td>
+                </tr>
+            <% end %>
+
+          </table>
+
+        </div>
+      </div>
+  <% else %>
+      <div class="jumbotron text-center">
+        <h2>You don't have any quizzes yet.</h2>
+        <h4>Create a <%= link_to 'new quiz', new_quiz_path %> now.</h4>
       </div>
   <% end %>
-
-  <div class="jumbotron text-center">
-    <h2>You don't have any quizzes yet.</h2>
-    <h4>Create a <%= link_to 'new quiz', new_quiz_path %> now.</h4>
-  </div>
 </div>
