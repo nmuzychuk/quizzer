@@ -3,8 +3,10 @@ class AnswersController < ApplicationController
   before_action :set_quiz
   before_action :set_question
   before_action :set_answer, only: [:show, :edit, :update, :destroy]
+  after_action :verify_authorized
 
   def index
+    authorize @question, :show?
     @answers = @question.answers
   end
 
@@ -12,14 +14,14 @@ class AnswersController < ApplicationController
   end
 
   def new
-    @answer = @question.answers.build
+    authorize @answer = @question.answers.build
   end
 
   def edit
   end
 
   def create
-    @answer = @question.answers.build(answer_params)
+    authorize @answer = @question.answers.build(answer_params)
 
     respond_to do |format|
       if @answer.save
@@ -73,7 +75,7 @@ class AnswersController < ApplicationController
   end
 
   def set_answer
-    @answer = @question.answers.find(params[:id])
+    authorize @answer = @question.answers.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

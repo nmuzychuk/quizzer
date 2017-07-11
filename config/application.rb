@@ -19,6 +19,9 @@ module Quizzer
     # Minimum Sass number precision required by bootstrap-sass
     ::Sass::Script::Value::Number.precision = [8, ::Sass::Script::Value::Number.precision].max
 
+    # Handle Pundit::NotAuthorizedError as a 403 error
+    config.action_dispatch.rescue_responses['Pundit::NotAuthorizedError'] = :forbidden
+
     config.generators do |g|
       g.test_framework :rspec, view_specs: false, request_specs: false, routing_specs: false
     end

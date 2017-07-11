@@ -1,6 +1,7 @@
 class QuizzesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_quiz, only: [:show, :edit, :update, :destroy]
+  after_action :verify_authorized, except: [:index, :new, :create]
 
   # GET /quizzes
   # GET /quizzes.json
@@ -66,7 +67,7 @@ class QuizzesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_quiz
-    @quiz = Quiz.find(params[:id])
+    authorize @quiz = Quiz.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
