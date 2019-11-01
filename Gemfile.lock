@@ -107,7 +107,7 @@ GEM
       rubocop (~> 0.20)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
-    jaro_winkler (1.5.3)
+    jaro_winkler (1.5.4)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -209,7 +209,7 @@ GEM
       rspec-mocks (~> 3.9.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.0)
-    rubocop (0.75.1)
+    rubocop (0.76.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.6)
@@ -295,7 +295,7 @@ DEPENDENCIES
   pundit
   rails (~> 5.1.6)
   rspec-rails (~> 3.9)
-  rubocop (~> 0.75.1)
+  rubocop (~> 0.76.0)
   sass-rails (~> 5.0)
   simplecov
   simplecov-rcov
