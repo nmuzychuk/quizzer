@@ -37,7 +37,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.9'
   gem 'factory_girl_rails'
   gem 'faker'
-  gem 'rubocop', '~> 0.75.1'
+  gem 'rubocop', '~> 0.77.0'
 
   gem 'capybara'
   gem 'poltergeist'
