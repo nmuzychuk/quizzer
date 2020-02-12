@@ -55,7 +55,7 @@ GEM
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
     cliver (0.3.2)
-    codacy-coverage (2.2.0)
+    codacy-coverage (2.2.1)
       simplecov
     coderay (1.1.2)
     coffee-rails (4.2.2)
