@@ -15,9 +15,9 @@ module Quizzer
     # Bower asset paths
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
     # Precompile Bootstrap fonts
-    config.assets.precompile << %r(bootstrap-sass/assets/fonts/bootstrap/[\w-]+\.(?:eot|svg|ttf|woff2?)$)
+    config.assets.precompile << %w(*.svg *.eot *.woff *.ttf)
     # Minimum Sass number precision required by bootstrap-sass
-    ::Sass::Script::Value::Number.precision = [8, ::Sass::Script::Value::Number.precision].max
+    # ::Sass::Script::Value::Number.precision = [8, ::Sass::Script::Value::Number.precision].max
 
     # Handle Pundit::NotAuthorizedError as a 403 error
     config.action_dispatch.rescue_responses['Pundit::NotAuthorizedError'] = :forbidden
