@@ -26,7 +26,7 @@ feature 'Sign up process' do
     fill_in 'Password confirmation', with: password
     click_button 'Sign up'
 
-    expect(page).to have_content 'Email is invalid'
+    expect(page).to have_content 'Sign up for Quizzer'
   end
 
   scenario 'User signs with invalid password' do
