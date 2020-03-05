@@ -18,7 +18,6 @@ require 'rspec/rails'
 
 require 'capybara/rails'
 require 'capybara/rspec'
-require 'capybara/poltergeist'
 
 require 'database_cleaner'
 
@@ -80,6 +79,6 @@ RSpec.configure do |config|
 end
 
 Capybara.configure do |config|
-  config.default_driver = :poltergeist
-  config.javascript_driver = :poltergeist
+  config.default_driver = :selenium_chrome_headless
+  config.javascript_driver = :selenium_chrome_headless
 end
