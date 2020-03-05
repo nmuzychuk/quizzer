@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.6.4
+- jruby-9.2.6.0
 env:
   matrix:
   - RAILS_ENV=test
