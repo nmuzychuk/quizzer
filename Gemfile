@@ -37,7 +37,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.0.beta3'
   gem 'factory_girl_rails'
   gem 'faker'
-  gem 'rubocop', '~> 0.80.0'
+  gem 'rubocop', '~> 0.80.1'
 
   gem 'capybara'
   gem 'selenium-webdriver'
