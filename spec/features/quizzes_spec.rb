@@ -40,6 +40,7 @@ feature 'Quizzes' do
     expect(page).to have_content updated_title
 
     click_link 'Destroy'
+    page.driver.browser.switch_to.alert.accept
 
     expect(page).to have_content 'Quiz was successfully destroyed'
   end

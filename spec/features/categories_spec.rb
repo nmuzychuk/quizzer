@@ -34,6 +34,7 @@ feature 'Categories' do
     expect(page).to have_content updated_name
 
     click_link 'Destroy'
+    page.driver.browser.switch_to.alert.accept
 
     expect(page).to have_content 'Category was successfully destroyed'
   end

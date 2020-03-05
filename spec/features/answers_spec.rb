@@ -45,6 +45,7 @@ feature 'Answers' do
     click_link updated_text
 
     click_link 'Destroy'
+    page.driver.browser.switch_to.alert.accept
 
     expect(page).to have_content 'Answer was successfully destroyed'
   end

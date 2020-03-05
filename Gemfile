@@ -40,7 +40,8 @@ group :development, :test do
   gem 'rubocop', '~> 0.80.0'
 
   gem 'capybara'
-  gem 'poltergeist'
+  gem 'selenium-webdriver'
+  gem 'webdrivers', '~> 4.0'
 
   gem 'database_cleaner'
 
