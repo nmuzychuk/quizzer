@@ -9,6 +9,8 @@ env:
 before_install:
   - gem update --system 3.0.0
   - gem --version
+  - which phantomjs
+  - phantomjs --version
 before_script:
   - npm install -g bower
   - bower install
