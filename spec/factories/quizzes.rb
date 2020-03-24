@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :quiz do
-    title Faker::Lorem.word
+    title Faker::Lorem.characters(number: 30)
     description Faker::Lorem.sentence
     published true
 

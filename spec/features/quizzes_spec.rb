@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 feature 'Quizzes' do
-  given(:category_name) { Faker::Lorem.word }
+  given(:category_name) { Faker::Lorem.characters(number: 30) }
   given(:user) { create(:user) }
 
-  given(:title) { Faker::Lorem.word }
-  given(:updated_title) { Faker::Lorem.word }
+  given(:title) { Faker::Lorem.characters(number: 30) }
+  given(:updated_title) { Faker::Lorem.characters(number: 30) }
 
   background do
     create(:category, name: category_name)
