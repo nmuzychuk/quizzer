@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 feature 'Categories' do
-  given(:name) { Faker::Lorem.word }
-  given(:updated_name) { Faker::Lorem.word }
+  given(:name) { Faker::Lorem.characters(number: 30) }
+  given(:updated_name) { Faker::Lorem.characters(number: 30) }
   given(:admin) { create(:admin) }
 
   scenario 'Signed in admin manages categories' do
