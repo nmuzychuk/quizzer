@@ -229,7 +229,7 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.1)
-    rubocop (1.10.0)
+    rubocop (1.11.0)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -327,7 +327,7 @@ DEPENDENCIES
   pundit
   rails (~> 6.0.3)
   rspec-rails (~> 4.0.2)
-  rubocop (~> 1.10.0)
+  rubocop (~> 1.11.0)
   sass-rails (~> 6.0)
   selenium-webdriver
   simplecov
