@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Sign up process' do
+feature 'Sign up process', feature: true do
   given(:email) { Faker::Internet.email }
   given(:password) { Faker::Internet.password }
 

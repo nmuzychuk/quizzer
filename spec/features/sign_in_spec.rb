@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Sign in process' do
+feature 'Sign in process', feature: true do
   given(:password) { Faker::Internet.password }
   given(:user) { create(:user, password: password) }
 

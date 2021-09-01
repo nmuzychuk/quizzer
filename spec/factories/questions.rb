@@ -1,6 +1,6 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :question do
-    text Faker::Lorem.sentence
+    text { Faker::Lorem.sentence }
     quiz
   end
 end

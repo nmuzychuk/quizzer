@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Dashboard' do
+feature 'Dashboard', feature: true do
   given(:user) { create(:user) }
 
   scenario 'Signed in user visits dashboard' do

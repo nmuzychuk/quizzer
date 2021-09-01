@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Quizzes' do
+feature 'Quizzes', feature: true do
   given(:category_name) { Faker::Lorem.characters(number: 30) }
   given(:user) { create(:user) }
 

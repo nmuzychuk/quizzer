@@ -1,7 +1,6 @@
 # Quizzer
-[![Build Status](https://travis-ci.org/nmuzychuk/quizzer.svg?branch=master)](https://travis-ci.org/nmuzychuk/quizzer)
+[![Ruby](https://github.com/nmuzychuk/quizzer/actions/workflows/ruby.yml/badge.svg)](https://github.com/nmuzychuk/quizzer/actions/workflows/ruby.yml)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5c39734cbc9d468e90f7fbdbce62218b)](https://www.codacy.com/app/nmuzychuk/quizzer)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/5c39734cbc9d468e90f7fbdbce62218b)](https://www.codacy.com/app/nmuzychuk/quizzer)
 
 ## Overview
 Quizzer is a way to play and create simple text quizzes.
@@ -12,10 +11,10 @@ App stack
 - AngularJS, Bootstrap
 - RSpec, Capybara
 
-## Heroku
-Heroku app
+## ~~Heroku~~
+~~Heroku app~~
 
-http://online-quizzes.herokuapp.com/
+~~http://online-quizzes.herokuapp.com/~~
 
 ## Vagrant
 Bring up a Vagrant VM

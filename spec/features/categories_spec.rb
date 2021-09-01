@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Categories' do
+feature 'Categories', feature: true do
   given(:name) { Faker::Lorem.characters(number: 30) }
   given(:updated_name) { Faker::Lorem.characters(number: 30) }
   given(:admin) { create(:admin) }
