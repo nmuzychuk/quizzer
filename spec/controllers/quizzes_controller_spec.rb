@@ -1,16 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe QuizzesController, type: :controller do
+  let(:quiz) { create(:quiz) }
+  let(:user) { quiz.user }
+  let(:category) { quiz.category }
+
   let(:valid_attributes) {
-    build(:quiz).attributes
+    build(:quiz, category_id: category.id).attributes
   }
 
   let(:invalid_attributes) {
     {title: nil}
   }
-
-  let(:quiz) { create(:quiz) }
-  let(:user) { quiz.user }
 
   describe 'GET #index' do
     before(:each) do

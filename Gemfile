@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
-ruby '2.6.4'
+ruby '~> 2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.3'
 # Use pg as the database for Active Record
-gem 'pg'
+gem 'pg', group: [:development, :production]
+gem 'sqlite3', group: :test
 # Use Puma as the app server
 gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
@@ -35,7 +36,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
 
   gem 'rspec-rails', '~> 4.0.2'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'faker'
   gem 'rubocop', '~> 1.18.3'
 

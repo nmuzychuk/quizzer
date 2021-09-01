@@ -1,7 +1,7 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :answer do
-    text Faker::Lorem.sentence
-    correct false
+    text { Faker::Lorem.sentence }
+    correct { false }
     question
   end
 end
