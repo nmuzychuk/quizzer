@@ -1,8 +1,12 @@
-FROM ruby:2.3.0
+FROM ruby:3.3
 
-RUN apt-get update -qq && apt-get install -y nodejs-legacy npm
+# Build deps for native gems (sqlite3, sassc, bcrypt) + Node for bower assets
+RUN apt-get update -qq && \
+    apt-get install -y --no-install-recommends build-essential libyaml-dev nodejs npm && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
 ENV APP_PATH /quizzer
-RUN mkdir ${APP_PATH}
+RUN mkdir -p ${APP_PATH}
 WORKDIR ${APP_PATH}
 
 COPY Gemfile $APP_PATH/Gemfile
@@ -11,4 +15,8 @@ RUN bundle install
 
 COPY . $APP_PATH
 
-RUN npm install -g bower && bower install --allow-root
+# Frontend assets (bower pulls bootstrap-sass / angular / jquery into vendor/assets)
+RUN npm install || npm install
+
+EXPOSE 3000
+CMD ["bundle", "exec", "rails", "s", "-p", "3000", "-b", "0.0.0.0"]

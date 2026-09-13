@@ -1,0 +1,10 @@
+# Large / generated dirs that should not be part of the Docker build context
+.toolchain/
+vendor/bundle/
+node_modules/
+coverage/
+log/*
+tmp/*
+db/*.sqlite3
+db/*.sqlite3-journal
+.git/

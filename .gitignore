@@ -36,3 +36,9 @@ ubuntu-xenial-16.04-cloudimg-console.log
 
 # Ignore node modules
 node_modules/
+
+# Ignore vendored gems (contains machine-specific native binaries)
+/vendor/bundle
+
+# Ignore local Ruby toolchain (workspace-local, not part of the app)
+/.toolchain

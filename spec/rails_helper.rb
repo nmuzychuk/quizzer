@@ -1,10 +1,4 @@
 require 'simplecov'
-require 'simplecov-rcov'
-require 'codacy-coverage'
-
-SimpleCov.formatters = [SimpleCov::Formatter::HTMLFormatter,
-                        SimpleCov::Formatter::RcovFormatter,
-                        Codacy::Formatter]
 SimpleCov.start 'rails'
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
@@ -46,7 +40,7 @@ ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.fixture_paths = ["#{::Rails.root}/spec/fixtures"]
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false

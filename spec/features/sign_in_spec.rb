@@ -21,7 +21,7 @@ feature 'Sign in process', feature: true do
     fill_in 'Password', with: password
     click_button 'Log in'
 
-    expect(page).to have_content 'Invalid Email or password'
+    expect(page).to have_content 'Invalid email or password'
   end
 
   scenario 'User signs in with invalid password' do
@@ -31,6 +31,6 @@ feature 'Sign in process', feature: true do
     fill_in 'Password', with: Faker::Internet.password
     click_button 'Log in'
 
-    expect(page).to have_content 'Invalid Email or password'
+    expect(page).to have_content 'Invalid email or password'
   end
 end

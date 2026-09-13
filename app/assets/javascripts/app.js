@@ -3,6 +3,6 @@ angular.module('quizzer', [])
         provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
     }]);
 
-$(document).on('turbolinks:load', function () {
+$(function () {
     angular.bootstrap('body', ['quizzer'])
 });
