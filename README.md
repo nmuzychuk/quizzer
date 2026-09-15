@@ -4,7 +4,27 @@
 ## Overview
 Quizzer is a way to play and create simple text quizzes.
 
-App stack:
+> This project was modernized — dependencies, toolchain, Docker, CI, and tests —
+> entirely by **Qwen 3.8 27B**.
+
+## Major upgrades
+The application was lifted from a legacy Rails 4 / Ruby 2.x / PostgreSQL codebase to a
+modern, self-contained stack, without a system-wide toolchain (Ruby is installed inside
+the workspace).
+
+| Layer | Before | Now |
+|-------|--------|-----|
+| Language | Ruby 2.3 | **Ruby 3.3.12** |
+| Web framework | Rails 4 | **Rails 8.0** |
+| Database | PostgreSQL 9.5 | **SQLite3** (gem `sqlite3` 2.9) |
+| Server | — | **Puma** 6.6 |
+| Auth | Devise (old) | **Devise** 5.0 |
+| Authorization | Pundit (old) | **Pundit** 2.5 |
+| Testing | RSpec / Capybara (old) | **RSpec** 6.1, **Capybara** 3.40, **Selenium** 4.49 |
+| Frontend | AngularJS 1.6, Bootstrap 3.3 | AngularJS 1.6, Bootstrap 3.3 (Sprockets/Bower) |
+| Packaging | Vagrant + manual | **Docker** (`ruby:3.3` base) + **GitHub Actions** |
+
+Full app stack:
 - Ruby 3.3
 - Rails 8
 - SQLite3
