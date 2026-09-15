@@ -9,7 +9,7 @@ gem 'rails', '~> 8.0.0'
 gem 'sqlite3', '~> 2.0'
 
 # Use Puma as the app server
-gem 'puma', '~> 6.4'
+gem 'puma', '~> 7.2'
 
 # Asset pipeline (Sprockets) - needed for the bower assets (bootstrap-sass, angular)
 gem 'sprockets-rails'
