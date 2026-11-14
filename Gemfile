@@ -6,7 +6,7 @@ ruby '>= 3.2.0'
 gem 'rails', '~> 8.0.0'
 
 # Use sqlite3 as the database for all environments
-gem 'sqlite3', '~> 2.0'
+gem 'sqlite3', '~> 2.10'
 
 # Use Puma as the app server
 gem 'puma', '~> 6.4'
